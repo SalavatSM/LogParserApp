@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <h2>Most Common IP Addresses:</h2>
+    <ul>
+        {% for ip, count in ip_count %}
+            <li>{{ ip }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Most Common Errors:</h2>
+    <ul>
+        {% for error, count in error_count %}
+            <li>{{ error }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Upload another log file</a>
+</body>
+</html>

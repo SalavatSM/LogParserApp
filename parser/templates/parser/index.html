@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Parser</title>
+</head>
+<body>
+    <h1>Log Parser</h1>
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="logfile" accept=".log"><br>
+        <button type="submit">Upload and Analyze</button>
+    </form>
+</body>
+</html>

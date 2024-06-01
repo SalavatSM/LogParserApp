@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Data</title>
+</head>
+<body>
+    <h1>Log Data Uploaded</h1>
+    <form action="{% url 'analyze' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Analyze Log Data</button>
+    </form>
+</body>
+</html>
